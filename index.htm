@@ -1,38 +1,48 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>LoRa Device Generator</title>
   <link rel="stylesheet" type="text/css" href="s.css">
 </head>
+
 <body>
   <div class="container">
-    <h1>LoRa Device Generator</h1>
+    <h2>LoRa Device Generator</h2>
     <!--<button id="generateBtn" onclick="generateKeys()">Generate Keys</button>-->
     <div id="keysContainer"></div>
     <div><input type="number" id="count" value=3 min=1 onchange="update()"></div>
-    
+
     <div>
-        
-        <p>Output Type</p>
-        <input type="radio" id="radio_text" name="outputtype" value="txt" checked="checked" onchange="update()">
-        <label for="text">Text</label>
-        <input type="radio" id="radio_json" name="outputtype" value="json" onchange="update()">
-        <label for="json">JSON</label>
-        <input type="radio" id="radio_ccpp" name="outputtype" value="ccpp" onchange="update()">
-        <label for="xml">C/C++ Code</label>
+
+      <p>Output Type</p>
+      <input type="radio" id="radio_text" name="outputtype" value="txt" checked="checked" onchange="update()">
+      <label for="text">Text</label>
+      <input type="radio" id="radio_json" name="outputtype" value="json" onchange="update()">
+      <label for="json">JSON</label>
+      <input type="radio" id="radio_ccpp" name="outputtype" value="ccpp" onchange="update()">
+      <label for="xml">C/C++ Code</label>
     </div>
     <div><textarea id="outtextarea" cols="50" rows="10" onclick="this.select()"></textarea></div>
     <div><button onclick="copyclipboard()">COPY to clipboard</button><span id="copymesg"></span>
-    <div>
+      <div>
         <button onclick="dltxt();">Download</button>
-    </div>
-    <div>
-        <p>Endianness Converter</p>
+      </div>
+      <div>
+        <h2>Endianness Converter</h2>
         <textarea id="einput" onchange="updateendianness()" oninput="updateendianness()"></textarea>
         <textarea id="eoutput"></textarea>
-    </div>
-  </div>
+      </div>
+      <p>
 
-  <script src="main.js"></script>
+      </p>
+      <p>
+        Source Code: <a href="https://github.com/plutphil/LoRaTools">https://github.com/plutphil/LoRaTools</a>
+        
+      </p>
+    </div>
+
+    <script src="main.js"></script>
 </body>
+
 </html>
